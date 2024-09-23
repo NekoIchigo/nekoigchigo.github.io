@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reydan's Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -21,6 +22,7 @@
   </head>
   <body class="poppins-regular">
     <div class="w-full relative grid bg-gray-950">
+      <!-- MOBILE NAV -->
       <button
         class="text-white sticky top-3 left-3 h-10 w-10 rounded-full bg-gray-950 z-10 flex items-center justify-center md:hidden"
       >
@@ -39,104 +41,248 @@
           />
         </svg>
       </button>
-      <div class="hidden absolute top-0 left-0 z-20 h-screen w-3/4 pt-5 px-5">
-        <nav class="">
-          <a href="#" class="flex gap-3">
-            <div class="h-5 w-5 shrink-0">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                />
-              </svg>
-            </div>
-            <p>Home</p>
-          </a>
-        </nav>
-      </div>
+      <!-- TOP BAR -->
       <div
-        class="p-5 bg-gray-900 w-full top-0 sticky z-20 text-white flex justify-between items-center"
+        class="p-5 h-24 bg-gray-950 w-full text-white flex justify-between items-center"
       >
-        <div class="bg-gray-950 rounded-md px-4 py-2">Logo</div>
-        <div class="flex gap-5 items-center">
-          <nav class="text-lg hover:text-blue-500">
-            <a href="#home">Home</a>
-          </nav>
-          <nav class="text-lg hover:text-blue-500">
-            <a href="#about">About</a>
-          </nav>
-          <nav class="text-lg hover:text-blue-500">
-            <a href="#projects">Projects</a>
-          </nav>
+        <div
+          class="bg-gray-950 rounded-md px-3.5 py-1.5 ml-3 border border-blue-500 rotate-45 hover:border-r-4 hover:border-t-2 hover:border-b-2 transition-all duration-150 ease-in-out"
+        >
+          <p class="-rotate-45 text-blue-500">R</p>
         </div>
-        <div>
-          <button class="rounded-md bg-gray-950 px-4 py-2 hover:text-blue-500">
-            Download CV
-          </button>
+        <div class="flex">
+          <div class="flex gap-4 items-center">
+            <nav class="hover:text-blue-500">
+              <a href="#home">Home</a>
+            </nav>
+            <nav class="hover:text-blue-500">
+              <a href="#about">About</a>
+            </nav>
+            <nav class="hover:text-blue-500">
+              <a href="#contact">Contact</a>
+            </nav>
+            <nav class="hover:text-blue-500">
+              <a href="#projects">Projects</a>
+            </nav>
+          </div>
+          <div class="w-28 pl-4">
+            <button
+              class="rounded-md border border-blue-500 px-4 py-2 hover:text-blue-500 hover:border-r-4 hover:border-b-4 transition-all duration-150 ease-in-out"
+            >
+              Resume
+            </button>
+          </div>
         </div>
       </div>
+      <!-- HOME -->
       <section
         id="home"
-        class="h-[100vh] p-10 w-full -mt-14 md:mt-0 bg-gray-950 flex items-center justify-center"
+        class="h-[100vh] p-10 w-full -mt-14 md:mt-0 bg-gray-950"
       >
-        <div class="grid grid-cols-2 z-10">
-          <div class="relative">
-            <div class="flex items-end relative">
-              <p class="text-white pr-3 text-2xl my-2">I'M</p>
-              <p class="text-blue-700 text-4xl my-2">Reydan John Belen</p>
+        <div class="relative">
+          <div class="grid items-end mx-auto w-3/4 relative gap-8">
+            <p class="text-blue-500 text-lg">Hi, my name is</p>
+            <p class="text-gray-400 text-5xl font-semibold">
+              Reydan John Belen.
+            </p>
+            <p class="text-gray-500 text-5xl font-semibold">
+              I transform ideas into engaging digital experiences across
+              platforms.
+            </p>
+            <p class="text-gray-500 w-1/2">
+              I'm a full-stack developer with experience in building web,
+              mobile, and desktop applications. I focus on creating efficient,
+              user-friendly solutions across platforms.
+            </p>
+            <div class="flex items-center gap-3">
+              <!-- Github -->
               <div
-                class="h-0.5 w-52 rounded-lg bg-blue-900 absolute -left-5"
-              ></div>
-            </div>
-            <div class="mt-5">
-              <p class="text-white">Full-Stack Developer</p>
-            </div>
-            <!-- flutter svg -->
-            <div class="absolute left-1/4 top-32 opacity-40">
-              <img
-                src="https://cdn.worldvectorlogo.com/logos/flutter.svg"
-                alt="Flutter Logo"
-                class="w-60 h-60 object-contain"
-              />
-            </div>
-            <!-- laravel svg -->
-            <div class="absolute left-1/4 bottom-40 opacity-40">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
-                alt="Laravel Logo"
-                class="w-60 h-60 object-contain"
-              />
-            </div>
-            <!-- Vue js -->
-            <div class="absolute -left-1/2 top-0 opacity-40">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
-                alt="Vue Logo"
-                class="w-60 h-60 object-contain"
-              />
-            </div>
-            <!-- Wordpress -->
-            <div class="absolute -right-1/2 bottom-0 opacity-40">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg"
-                alt="WordPress Logo"
-                class="w-60 h-60 object-contain"
-              />
+                class="h-6 w-6 text-gray-500 hover:cursor-pointer hover:text-gray-400"
+              >
+                <a
+                  href="https://github.com/NekoIchigo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    viewBox="0 0 20 20"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    fill="#000000"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <title>github [#142]</title>
+                      <desc>Created with Sketch.</desc>
+                      <defs></defs>
+                      <g
+                        id="Page-1"
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd"
+                      >
+                        <g
+                          id="Dribbble-Light-Preview"
+                          transform="translate(-140.000000, -7559.000000)"
+                          fill="#808080"
+                        >
+                          <g
+                            id="icons"
+                            transform="translate(56.000000, 160.000000)"
+                          >
+                            <path
+                              d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
+                              id="github-[#142]"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+              <!-- LinkedIn -->
+              <div class="h-9 w-9 text-gray-500 hover:cursor-pointer">
+                <a
+                  href="https://www.linkedin.com/in/reydan-john-b-3022b3137"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z"
+                        fill="#808080"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+              <!-- Gmail -->
+              <div class="h-8 w-8 text-gray-500 hover:cursor-pointer">
+                <a href="mailto:reydanjohnbelen@gmail.com" target="_blank">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M21 8L17.4392 9.97822C15.454 11.0811 14.4614 11.6326 13.4102 11.8488C12.4798 12.0401 11.5202 12.0401 10.5898 11.8488C9.53864 11.6326 8.54603 11.0811 6.5608 9.97822L3 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z"
+                        stroke="#808080"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+              <!-- WhatsApp -->
+              <div class="h-8 w-8 text-gray-500 hover:cursor-pointer">
+                <a
+                  href="https://wa.me/+639487285332"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    fill="#808080"
+                    viewBox="0 0 1024 1024"
+                    t="1569683925316"
+                    class="icon"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    p-id="14972"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <defs><style type="text/css"></style></defs>
+                      <path
+                        d="M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8-10.1-3.8-17.5-5.6-24.8 5.6-7.4 11.1-28.4 35.8-35 43.3-6.4 7.4-12.9 8.3-23.8 2.8-64.8-32.4-107.3-57.8-150-131.1-11.3-19.5 11.3-18.1 32.4-60.2 3.6-7.4 1.8-13.7-1-19.3-2.8-5.6-24.8-59.8-34-81.9-8.9-21.5-18.1-18.5-24.8-18.9-6.4-0.4-13.7-0.4-21.1-0.4-7.4 0-19.3 2.8-29.4 13.7-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5 70 30.2 97.4 32.8 132.4 27.6 21.3-3.2 65.2-26.6 74.3-52.5 9.1-25.8 9.1-47.9 6.4-52.5-2.7-4.9-10.1-7.7-21-13z"
+                        p-id="14973"
+                      ></path>
+                      <path
+                        d="M925.2 338.4c-22.6-53.7-55-101.9-96.3-143.3-41.3-41.3-89.5-73.8-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6 0.3-119.3 12.3-174.5 35.9-53.3 22.8-101.1 55.2-142 96.5-40.9 41.3-73 89.3-95.2 142.8-23 55.4-34.6 114.3-34.3 174.9 0.3 69.4 16.9 138.3 48 199.9v152c0 25.4 20.6 46 46 46h152.1c61.6 31.1 130.5 47.7 199.9 48h2.1c59.9 0 118-11.6 172.7-34.3 53.5-22.3 101.6-54.3 142.8-95.2 41.3-40.9 73.8-88.7 96.5-142 23.6-55.2 35.6-113.9 35.9-174.5 0.3-60.9-11.5-120-34.8-175.6z m-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-0.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-0.4-99.7 37.7-193.3 107.6-263.8 69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9 44.6 18.7 84.6 45.6 119 80 34.3 34.3 61.3 74.4 80 119 19.4 46.2 29.1 95.2 28.9 145.8-0.6 99.6-39.7 192.9-110.1 262.7z"
+                        p-id="14974"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-          <div class=""></div>
         </div>
       </section>
-      <section id="about" class="h-[100vh] p-10 bg-gray-900 z-10"></section>
+      <!-- ABOUT -->
+      <section id="about" class="h-[100vh] p-10 bg-gray-900 z-10">
+        <div class="hidden">
+          <!-- flutter svg -->
+          <div class="absolute left-1/4 top-32 opacity-40">
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/flutter.svg"
+              alt="Flutter Logo"
+              class="w-60 h-60 object-contain"
+            />
+          </div>
+          <!-- laravel svg -->
+          <div class="absolute left-1/4 bottom-40 opacity-40">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
+              alt="Laravel Logo"
+              class="w-60 h-60 object-contain"
+            />
+          </div>
+          <!-- Vue js -->
+          <div class="absolute -left-1/2 top-0 opacity-40">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
+              alt="Vue Logo"
+              class="w-60 h-60 object-contain"
+            />
+          </div>
+          <!-- Wordpress -->
+          <div class="absolute -right-1/2 bottom-0 opacity-40">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg"
+              alt="WordPress Logo"
+              class="w-60 h-60 object-contain"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- PROJECTS -->
       <section id="projects" class="h-[100vh] p-10 bg-gray-950"></section>
+      <!-- CONTACT -->
+      <footer id="contact"></footer>
     </div>
   </body>
 </html>
