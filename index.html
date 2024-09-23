@@ -22,74 +22,117 @@
   </head>
   <body class="poppins-regular bg-gray-950 text-white">
     <div class="w-full relative grid bg-gray-950">
-      <!-- MOBILE NAV -->
-      <button
-        class="text-white sticky top-3 left-3 h-10 w-10 rounded-full bg-gray-950 z-10 flex items-center justify-center md:hidden"
+      <!-- MOBILE SLIDER -->
+      <div
+        id="sideSlider"
+        class="fixed top-0 right-0 w-64 h-full z-30 bg-gray-900 transform translate-x-full transition-transform duration-500 ease-in-out"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-      </button>
+        <div class="p-5">
+          <div class="w-full flex justify-end">
+            <button id="closeButton" class="text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="grid justify-center gap-8 text-center items-center mt-20">
+              <nav class="hover:text-blue-500">
+                <a href="#home">Home</a>
+              </nav>
+              <nav class="hover:text-blue-500">
+                <a href="#about">About</a>
+              </nav>
+              <nav class="hover:text-blue-500">
+                <a href="#projects">Projects</a>
+              </nav>
+            <div class="w-28">
+              <button
+                class="rounded-md border border-blue-500 px-4 py-2 hover:text-blue-500 hover:border-r-4 hover:border-b-4 transition-all duration-150 ease-in-out"
+              >
+                Resume
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- TOP BAR -->
       <div
-        class="p-5 h-24 sticky top-0 bg-gray-950 w-full text-white flex justify-between items-center z-20"
+        class="p-5 h-24 sticky top-0 bg-gray-950 w-screen md:w-full text-white flex justify-between items-center z-20"
       >
         <div
           class="bg-gray-950 rounded-md px-3.5 py-1.5 ml-3 border border-blue-500 rotate-45 hover:border-r-4 hover:border-t-2 hover:border-b-2 transition-all duration-150 ease-in-out"
         >
           <p class="-rotate-45 text-blue-500">R</p>
         </div>
-        <div class="flex">
-          <div class="flex gap-4 items-center">
-            <nav class="hover:text-blue-500">
-              <a href="#home">Home</a>
-            </nav>
-            <nav class="hover:text-blue-500">
-              <a href="#about">About</a>
-            </nav>
-            <nav class="hover:text-blue-500">
-              <a href="#projects">Projects</a>
-            </nav>
-            <nav class="hover:text-blue-500">
-              <a href="#contact">Contact</a>
-            </nav>
-          </div>
-          <div class="w-28 pl-4">
-            <a href="https://raw.githubusercontent.com/NekoIchigo/portfolio/refs/heads/main/ReydanJohnBelen_CV.pdf" target="_blank"
-              class="rounded-md border border-blue-500 px-4 py-2 hover:text-blue-500 hover:border-r-4 hover:border-b-4 transition-all duration-150 ease-in-out"
-            >
-              Resume
-            </a>
+        <button
+          id="toggleButton"
+          class="text-blue-500 sticky top-3 left-3 h-10 w-10 rounded-full bg-gray-950 z-10 flex items-center justify-center md:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+        <div class="hidden md:block">
+          <div class="flex">
+            <div class="flex gap-4 items-center">
+              <nav class="hover:text-blue-500">
+                <a href="#home">Home</a>
+              </nav>
+              <nav class="hover:text-blue-500">
+                <a href="#about">About</a>
+              </nav>
+              <nav class="hover:text-blue-500">
+                <a href="#projects">Projects</a>
+              </nav>
+            </div>
+            <div class="w-28 pl-4">
+              <button
+                class="rounded-md border border-blue-500 px-4 py-2 hover:text-blue-500 hover:border-r-4 hover:border-b-4 transition-all duration-150 ease-in-out"
+              >
+                Resume
+              </button>
+            </div>
           </div>
         </div>
       </div>
       <!-- HOME -->
       <section
         id="home"
-        class="h-[100vh] p-10 w-full -mt-14 md:mt-0 bg-gray-950"
+        class="md:h-[100vh] p-10 w-screen md:w-full md:mt-0 bg-gray-950"
       >
         <div class="relative">
-          <div class="grid items-end mx-auto w-3/4 relative gap-8">
-            <p class="text-blue-500 text-lg">Hi, my name is</p>
-            <p class="text-gray-400 text-5xl font-semibold">
+          <div class="grid items-end mx-auto md:w-3/4 relative gap-4 md:gap-8">
+            <p class="text-blue-500 md:text-lg">Hi, my name is</p>
+            <p class="text-gray-400 text-3xl md:text-5xl font-semibold">
               Reydan John Belen.
             </p>
-            <p class="text-gray-500 text-5xl font-semibold">
+            <p class="text-gray-500 text-3xl md:text-5xl font-semibold">
               I transform ideas into engaging digital experiences across
               platforms.
             </p>
-            <p class="text-gray-500 w-1/2">
+            <p class="text-gray-500 md:w-1/2">
               I'm a full-stack developer with experience in building web,
               mobile, and desktop applications. I focus on creating efficient,
               user-friendly solutions across platforms.
@@ -243,50 +286,52 @@
         </div>
       </section>
       <!-- ABOUT -->
-      <section id="about" class="h-fit p-10 w-full mb-40">
-        <div class="grid items-center mx-auto w-3/4 gap-y-5">
+      <section id="about" class="h-fit p-10 w-screen md:w-full md:mb-40">
+        <div class="grid items-center mx-auto md:w-3/4 gap-y-5">
           <h1 class="text-blue-500 text-3xl">About</h1>
-          <p class="text-xl mb-5 text-gray-500">Skills & Frameworks</p>
-          <div class="flex items-center justify-around my-5">
+          <p class="text-xl mb-2 md:mb-5 text-gray-500">Skills & Frameworks</p>
+          <div
+            class="grid grid-cols-3 gap-5 md:flex items-center justify-around md:my-5"
+          >
             <!-- flutter svg -->
-            <div class="bg-gray-900 rounded-md px-7 py-3">
+            <div class="bg-gray-900 rounded-md w-fit px-6 py-2 md:px-7 md:py-3">
               <img
                 src="https://cdn.worldvectorlogo.com/logos/flutter.svg"
                 alt="Flutter Logo"
-                class="w-28 h-28 object-contain my-3"
+                class="w-10 h-10 md:w-28 md:h-28 object-contain my-3"
               />
-              <p class="text-center">Flutter</p>
+              <p class="text-center hidden md:block">Flutter</p>
             </div>
             <!-- laravel svg -->
-            <div class="bg-gray-900 rounded-md px-7 py-3">
+            <div class="bg-gray-900 rounded-md w-fit px-6 py-2 md:px-7 md:py-3">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
                 alt="Laravel Logo"
-                class="w-28 h-28 object-contain my-3"
+                class="w-10 h-10 md:w-28 md:h-28 object-contain my-3"
               />
-              <p class="text-center">Laravel</p>
+              <p class="text-center hidden md:block">Laravel</p>
             </div>
             <!-- Vue js -->
-            <div class="bg-gray-900 rounded-md px-7 py-3">
+            <div class="bg-gray-900 rounded-md w-fit px-6 py-2 md:px-7 md:py-3">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
                 alt="Vue Logo"
-                class="w-28 h-28 object-contain my-3"
+                class="w-10 h-10 md:w-28 md:h-28 object-contain my-3"
               />
-              <p class="text-center">Vue JS</p>
+              <p class="text-center hidden md:block">Vue. js</p>
             </div>
             <!-- Wordpress -->
-            <div class="bg-gray-900 rounded-md px-7 py-3">
+            <div class="bg-gray-900 rounded-md w-fit px-6 py-2 md:px-7 md:py-3">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg"
                 alt="WordPress Logo"
-                class="w-28 h-28 object-contain my-3"
+                class="w-10 h-10 md:w-28 md:h-28 object-contain my-3"
               />
-              <p class="text-center">WordPress</p>
+              <p class="text-center hidden md:block">WordPress</p>
             </div>
             <!-- Firebase Logo -->
-            <div class="bg-gray-900 rounded-md px-7 py-3">
-              <div class="w-28 h-28 my-3">
+            <div class="bg-gray-900 rounded-md w-fit px-6 py-2 md:px-7 md:py-3">
+              <div class="w-10 h-10 md:w-28 md:h-28 my-3">
                 <svg
                   viewBox="-47.5 0 351 351"
                   version="1.1"
@@ -433,14 +478,14 @@
                   </g>
                 </svg>
               </div>
-              <p class="text-center">Firebase</p>
+              <p class="text-center hidden md:block">Firebase</p>
             </div>
           </div>
           <p class="text-xl mb-5 text-gray-500 my-5">Work Experience</p>
-          <div class="grid grid-cols-4">
+          <div class="md:grid md:grid-cols-4">
             <p class="text-gray-500">September 2023 - Present</p>
             <div class="col-span-3">
-              <p class="text-lg">
+              <p class="text-lg py-5 md:py-0">
                 Globalland Property Management Inc. | Mandaluyong City
               </p>
               <p class="text-lg">Software Developer</p>
@@ -468,8 +513,8 @@
               </ul>
             </div>
           </div>
-          <div class="grid grid-cols-4">
-            <p class="text-gray-500">March 2023 - July 2023</p>
+          <div class="md:grid md:grid-cols-4">
+            <p class="text-gray-500 py-5 md:py-0">March 2023 - July 2023</p>
             <div class="col-span-3">
               <p class="text-lg">
                 Globalland Property Management Inc. | Mandaluyong City
@@ -486,35 +531,37 @@
           </div>
         </div>
       </section>
-      <!-- PROJECTS -->
-      <section id="projects" class="p-10 pb-20 mx-auto w-3/4 mb-20">
-        <h1 class="text-blue-500 text-3xl">Projects</h1>
-        <!-- Project 1 -->
-        <div class="w-full relative my-10">
-          <a
-            href="https://www.globalland.com.ph/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              class="rounded-md opacity-70 hover:opacity-100 transition-all duration-150 ease-in-out"
-              width="650"
-              height="600"
-              src="gpmi.png"
-              alt="Globalland Website"
-            />
-          </a>
-          <div class="absolute top-44 right-0 z-10 w-1/2">
-            <div class="relative">
-              <h2 class="text-end text-xl hover:text-blue-500 mb-3">
+      <section
+        id="projects"
+        class="p-10 pb-20 mx-auto w-screen md:w-3/4 md:mb-20"
+      >
+        <!-- PROJECT MOBILE -->
+        <div class="md:hidden">
+          <h1 class="text-blue-500 text-3xl">Projects</h1>
+          <div class="w-full my-10 bg-gray-900 px-4 py-5 rounded-md">
+            <a
+              href="https://www.globalland.com.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="rounded-md opacity-70 hover:opacity-100 transition-all duration-150 ease-in-out"
+                width="650"
+                height="600"
+                src="gpmi.png"
+                alt="Globalland Website"
+              />
+            </a>
+            <div class="">
+              <h2 class="text-xl hover:text-blue-500 mb-3">
                 <a
                   href="https://www.globalland.com.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="flex items-center justify-end"
+                  class="flex items-center pt-4"
                 >
                   <div>Globalland Corporate Website</div>
-                  <div class="h-4 w-4 ml-3">
+                  <div class="h-6 w-6 ml-3">
                     <svg
                       fill="#FFFFFF"
                       xmlns="http://www.w3.org/2000/svg"
@@ -542,96 +589,82 @@
                   </div>
                 </a>
               </h2>
-              <p
-                class="bg-gray-900 px-8 py-5 rounded-md text-end absolute right-0 text-gray-500"
-              >
+              <p class="text-gray-500 text-justify">
                 A <span class="text-blue-500">WordPress</span> website to
                 advertise a company's service. I became a part of this project
                 to enhance functionality and user experience.
               </p>
             </div>
           </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="w-full mt-40 h-[400px]">
-          <div class="w-full relative my-10">
-            <div class="absolute top-44 left-0 z-10 w-1/2">
-              <div class="relative">
-                <h2 class="text-end text-xl hover:text-blue-500 mb-3">
-                  <a
-                    href="https://gems-stg.globalland.com.ph/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex items-center justify-start"
-                  >
-                    <div>GEMS: Time & Attendance System</div>
-                    <div class="h-4 w-4 ml-3">
-                      <svg
-                        fill="#FFFFFF"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 52 52"
-                        enable-background="new 0 0 52 52"
-                        xml:space="preserve"
-                      >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <g>
-                            <path
-                              d="M48.7,2H29.6C28.8,2,28,2.5,28,3.3v3C28,7.1,28.7,8,29.6,8h7.9c0.9,0,1.4,1,0.7,1.6l-17,17 c-0.6,0.6-0.6,1.5,0,2.1l2.1,2.1c0.6,0.6,1.5,0.6,2.1,0l17-17c0.6-0.6,1.6-0.2,1.6,0.7v7.9c0,0.8,0.8,1.7,1.6,1.7h2.9 c0.8,0,1.5-0.9,1.5-1.7v-19C50,2.5,49.5,2,48.7,2z"
-                            ></path>
-                            <path
-                              d="M36.3,25.5L32.9,29c-0.6,0.6-0.9,1.3-0.9,2.1v11.4c0,0.8-0.7,1.5-1.5,1.5h-21C8.7,44,8,43.3,8,42.5v-21 C8,20.7,8.7,20,9.5,20H21c0.8,0,1.6-0.3,2.1-0.9l3.4-3.4c0.6-0.6,0.2-1.7-0.7-1.7H6c-2.2,0-4,1.8-4,4v28c0,2.2,1.8,4,4,4h28 c2.2,0,4-1.8,4-4V26.2C38,25.3,36.9,24.9,36.3,25.5z"
-                            ></path>
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                  </a>
-                </h2>
-                <p
-                  class="bg-gray-900 px-8 py-5 rounded-md text-end absolute left-0 text-gray-500"
+          <div class="w-full my-10 bg-gray-900 px-4 py-5 rounded-md">
+            <a
+              href="https://gems-stg.globalland.com.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="rounded-md opacity-70 hover:opacity-100 transition-all duration-150 ease-in-out"
+                width="650"
+                height="600"
+                src="gems.png"
+                alt="GEMS Website"
+              />
+            </a>
+            <div class="">
+              <h2 class="text-xl hover:text-blue-500 mb-3">
+                <a
+                  href="https://gems-stg.globalland.com.ph/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center pt-4"
                 >
-                  An admin website for configuring and monitoring employee
-                  attendance and leave. The website is built with
-                  <span class="text-blue-500">Vue.js</span> and
-                  <span class="text-blue-500">Laravel</span>. GEMS also has a
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.gets.gems"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="underline text-blue-700"
-                    >mobile app</a
-                  >
-                  for employees to clock in and out, developed using
-                  <span class="text-blue-500">Flutter</span>.
-                </p>
-              </div>
-            </div>
-            <div class="absolute right-0">
-              <a
-                href="https://gems-stg.globalland.com.ph/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="rounded-md opacity-70 hover:opacity-100 transition-all duration-150 ease-in-out"
-                  width="650"
-                  height="600"
-                  src="gems.png"
-                  alt="GEMS Website"
-                />
-              </a>
+                  <div>GEMS: Time & Attendance System</div>
+                  <div class="h-6 w-6 ml-3">
+                    <svg
+                      fill="#FFFFFF"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 52 52"
+                      enable-background="new 0 0 52 52"
+                      xml:space="preserve"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <g>
+                          <path
+                            d="M48.7,2H29.6C28.8,2,28,2.5,28,3.3v3C28,7.1,28.7,8,29.6,8h7.9c0.9,0,1.4,1,0.7,1.6l-17,17 c-0.6,0.6-0.6,1.5,0,2.1l2.1,2.1c0.6,0.6,1.5,0.6,2.1,0l17-17c0.6-0.6,1.6-0.2,1.6,0.7v7.9c0,0.8,0.8,1.7,1.6,1.7h2.9 c0.8,0,1.5-0.9,1.5-1.7v-19C50,2.5,49.5,2,48.7,2z"
+                          ></path>
+                          <path
+                            d="M36.3,25.5L32.9,29c-0.6,0.6-0.9,1.3-0.9,2.1v11.4c0,0.8-0.7,1.5-1.5,1.5h-21C8.7,44,8,43.3,8,42.5v-21 C8,20.7,8.7,20,9.5,20H21c0.8,0,1.6-0.3,2.1-0.9l3.4-3.4c0.6-0.6,0.2-1.7-0.7-1.7H6c-2.2,0-4,1.8-4,4v28c0,2.2,1.8,4,4,4h28 c2.2,0,4-1.8,4-4V26.2C38,25.3,36.9,24.9,36.3,25.5z"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </a>
+              </h2>
+              <p class="text-gray-500 text-justify">
+                An admin website for configuring and monitoring employee
+                attendance and leave. The website is built with
+                <span class="text-blue-500">Vue.js</span> and
+                <span class="text-blue-500">Laravel</span>. GEMS also has a
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.gets.gems"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline text-blue-700"
+                  >mobile app</a
+                >
+                for employees to clock in and out, developed using
+                <span class="text-blue-500">Flutter</span>.
+              </p>
             </div>
           </div>
-        </div>
-        <!-- Project 3 -->
-        <div class="w-full mt-40">
-          <div class="w-full relative my-10">
+          <div class="w-full my-10 bg-gray-900 px-4 py-5 rounded-md">
             <a
               href="https://agap-f4c32.web.app/"
               target="_blank"
@@ -642,19 +675,86 @@
                 width="650"
                 height="600"
                 src="agap.png"
-                alt="Agap Website"
+                alt="AGAP Website"
               />
             </a>
-            <div class="absolute top-36 right-0 z-10 w-1/2">
+            <div class="">
+              <h2 class="text-xl hover:text-blue-500 mb-3">
+                <a
+                  href="https://agap-f4c32.web.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center pt-4"
+                >
+                  <div>AGAP: Emergency Rescue Application</div>
+                  <div class="h-6 w-6 ml-3">
+                    <svg
+                      fill="#FFFFFF"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 52 52"
+                      enable-background="new 0 0 52 52"
+                      xml:space="preserve"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <g>
+                          <path
+                            d="M48.7,2H29.6C28.8,2,28,2.5,28,3.3v3C28,7.1,28.7,8,29.6,8h7.9c0.9,0,1.4,1,0.7,1.6l-17,17 c-0.6,0.6-0.6,1.5,0,2.1l2.1,2.1c0.6,0.6,1.5,0.6,2.1,0l17-17c0.6-0.6,1.6-0.2,1.6,0.7v7.9c0,0.8,0.8,1.7,1.6,1.7h2.9 c0.8,0,1.5-0.9,1.5-1.7v-19C50,2.5,49.5,2,48.7,2z"
+                          ></path>
+                          <path
+                            d="M36.3,25.5L32.9,29c-0.6,0.6-0.9,1.3-0.9,2.1v11.4c0,0.8-0.7,1.5-1.5,1.5h-21C8.7,44,8,43.3,8,42.5v-21 C8,20.7,8.7,20,9.5,20H21c0.8,0,1.6-0.3,2.1-0.9l3.4-3.4c0.6-0.6,0.2-1.7-0.7-1.7H6c-2.2,0-4,1.8-4,4v28c0,2.2,1.8,4,4,4h28 c2.2,0,4-1.8,4-4V26.2C38,25.3,36.9,24.9,36.3,25.5z"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </a>
+              </h2>
+              <p class="text-gray-500 text-justify">
+                AGAP: Emergency Rescue Application is a thesis project designed
+                to monitor emergency reports and respond to them. It is built
+                using <span class="text-blue-500">Vue.js</span> and
+                <span class="text-blue-500">Firebase</span>. The application
+                includes a mobile app, developed in
+                <span class="text-blue-500">Flutter</span>, that allows users to
+                report emergencies or accidents in real-time.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- PROJECTS DESKTOP -->
+        <div class="hidden md:block">
+          <h1 class="text-blue-500 text-3xl">Projects</h1>
+          <!-- Project 1 -->
+          <div class="w-full relative my-10">
+            <a
+              href="https://www.globalland.com.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="rounded-md opacity-70 hover:opacity-100 transition-all duration-150 ease-in-out"
+                width="650"
+                height="600"
+                src="gpmi.png"
+                alt="Globalland Website"
+              />
+            </a>
+            <div class="absolute top-44 right-0 z-10 w-1/2">
               <div class="relative">
                 <h2 class="text-end text-xl hover:text-blue-500 mb-3">
                   <a
-                    href="https://agap-f4c32.web.app/"
+                    href="https://www.globalland.com.ph/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex items-center justify-end"
                   >
-                    <div>AGAP: Emergency Rescue Application</div>
+                    <div>Globalland Corporate Website</div>
                     <div class="h-4 w-4 ml-3">
                       <svg
                         fill="#FFFFFF"
@@ -686,12 +786,157 @@
                 <p
                   class="bg-gray-900 px-8 py-5 rounded-md text-end absolute right-0 text-gray-500"
                 >
-                  AGAP: Emergency Rescue Application is a thesis project
-                  designed to monitor emergency reports and respond to them. It
-                  is built using Vue.js and Firebase. The application includes a
-                  mobile app, developed in Flutter, that allows users to report
-                  emergencies or accidents in real-time.
+                  A <span class="text-blue-500">WordPress</span> website to
+                  advertise a company's service. I became a part of this project
+                  to enhance functionality and user experience.
                 </p>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="w-full mt-40 h-[400px]">
+            <div class="w-full relative my-10">
+              <div class="absolute top-44 left-0 z-10 w-1/2">
+                <div class="relative">
+                  <h2 class="text-end text-xl hover:text-blue-500 mb-3">
+                    <a
+                      href="https://gems-stg.globalland.com.ph/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex items-center justify-start"
+                    >
+                      <div>GEMS: Time & Attendance System</div>
+                      <div class="h-4 w-4 ml-3">
+                        <svg
+                          fill="#FFFFFF"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 52 52"
+                          enable-background="new 0 0 52 52"
+                          xml:space="preserve"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <g>
+                              <path
+                                d="M48.7,2H29.6C28.8,2,28,2.5,28,3.3v3C28,7.1,28.7,8,29.6,8h7.9c0.9,0,1.4,1,0.7,1.6l-17,17 c-0.6,0.6-0.6,1.5,0,2.1l2.1,2.1c0.6,0.6,1.5,0.6,2.1,0l17-17c0.6-0.6,1.6-0.2,1.6,0.7v7.9c0,0.8,0.8,1.7,1.6,1.7h2.9 c0.8,0,1.5-0.9,1.5-1.7v-19C50,2.5,49.5,2,48.7,2z"
+                              ></path>
+                              <path
+                                d="M36.3,25.5L32.9,29c-0.6,0.6-0.9,1.3-0.9,2.1v11.4c0,0.8-0.7,1.5-1.5,1.5h-21C8.7,44,8,43.3,8,42.5v-21 C8,20.7,8.7,20,9.5,20H21c0.8,0,1.6-0.3,2.1-0.9l3.4-3.4c0.6-0.6,0.2-1.7-0.7-1.7H6c-2.2,0-4,1.8-4,4v28c0,2.2,1.8,4,4,4h28 c2.2,0,4-1.8,4-4V26.2C38,25.3,36.9,24.9,36.3,25.5z"
+                              ></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </a>
+                  </h2>
+                  <p
+                    class="bg-gray-900 px-8 py-5 rounded-md text-end absolute left-0 text-gray-500"
+                  >
+                    An admin website for configuring and monitoring employee
+                    attendance and leave. The website is built with
+                    <span class="text-blue-500">Vue.js</span> and
+                    <span class="text-blue-500">Laravel</span>. GEMS also has a
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.gets.gems"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="underline text-blue-700"
+                      >mobile app</a
+                    >
+                    for employees to clock in and out, developed using
+                    <span class="text-blue-500">Flutter</span>.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute right-0">
+                <a
+                  href="https://gems-stg.globalland.com.ph/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    class="rounded-md opacity-70 hover:opacity-100 transition-all duration-150 ease-in-out"
+                    width="650"
+                    height="600"
+                    src="gems.png"
+                    alt="GEMS Website"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="w-full mt-40">
+            <div class="w-full relative my-10">
+              <a
+                href="https://agap-f4c32.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="rounded-md opacity-70 hover:opacity-100 transition-all duration-150 ease-in-out"
+                  width="650"
+                  height="600"
+                  src="agap.png"
+                  alt="Agap Website"
+                />
+              </a>
+              <div class="absolute top-36 right-0 z-10 w-1/2">
+                <div class="relative">
+                  <h2 class="text-end text-xl hover:text-blue-500 mb-3">
+                    <a
+                      href="https://agap-f4c32.web.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex items-center justify-end"
+                    >
+                      <div>AGAP: Emergency Rescue Application</div>
+                      <div class="h-4 w-4 ml-3">
+                        <svg
+                          fill="#FFFFFF"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 52 52"
+                          enable-background="new 0 0 52 52"
+                          xml:space="preserve"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <g>
+                              <path
+                                d="M48.7,2H29.6C28.8,2,28,2.5,28,3.3v3C28,7.1,28.7,8,29.6,8h7.9c0.9,0,1.4,1,0.7,1.6l-17,17 c-0.6,0.6-0.6,1.5,0,2.1l2.1,2.1c0.6,0.6,1.5,0.6,2.1,0l17-17c0.6-0.6,1.6-0.2,1.6,0.7v7.9c0,0.8,0.8,1.7,1.6,1.7h2.9 c0.8,0,1.5-0.9,1.5-1.7v-19C50,2.5,49.5,2,48.7,2z"
+                              ></path>
+                              <path
+                                d="M36.3,25.5L32.9,29c-0.6,0.6-0.9,1.3-0.9,2.1v11.4c0,0.8-0.7,1.5-1.5,1.5h-21C8.7,44,8,43.3,8,42.5v-21 C8,20.7,8.7,20,9.5,20H21c0.8,0,1.6-0.3,2.1-0.9l3.4-3.4c0.6-0.6,0.2-1.7-0.7-1.7H6c-2.2,0-4,1.8-4,4v28c0,2.2,1.8,4,4,4h28 c2.2,0,4-1.8,4-4V26.2C38,25.3,36.9,24.9,36.3,25.5z"
+                              ></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </a>
+                  </h2>
+                  <p
+                    class="bg-gray-900 px-8 py-5 rounded-md text-end absolute right-0 text-gray-500"
+                  >
+                    AGAP: Emergency Rescue Application is a thesis project
+                    designed to monitor emergency reports and respond to them.
+                    It is built using
+                    <span class="text-blue-500">Vue.js</span> and
+                    <span class="text-blue-500">Firebase</span>. The application
+                    includes a mobile app, developed in
+                    <span class="text-blue-500">Flutter</span>, that allows
+                    users to report emergencies or accidents in real-time.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -864,6 +1109,20 @@
             behavior: "smooth", // Smooth scroll
           });
         });
+      });
+
+      const toggleButton = document.getElementById("toggleButton");
+      const closeButton = document.getElementById("closeButton");
+      const sideSlider = document.getElementById("sideSlider");
+
+      toggleButton.addEventListener("click", () => {
+        sideSlider.classList.remove("translate-x-full");
+        sideSlider.classList.add("translate-x-0");
+      });
+
+      closeButton.addEventListener("click", () => {
+        sideSlider.classList.remove("translate-x-0");
+        sideSlider.classList.add("translate-x-full");
       });
     </script>
   </body>
